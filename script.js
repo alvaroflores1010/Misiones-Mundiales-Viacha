@@ -121,15 +121,15 @@ window.__DATA_FALLBACK__ = {
   "announcements": [
     {
       "title": "Torneo Bíblico - Sociedad Cristiana de Jóvenes",
-      "body": "Sábado 18:30 - Iglesia World Wide Mission."
+      "body": "Sábado 31 de enero del 2026 a las 18:30 - Iglesia World Wide Mission."
     },
     {
       "title": "Oración de Madrugada",
-      "body": "Sábado 18:30 - Iglesia World Wide Mission."
+      "body": "Sábado 31 de enero del 2026 a las 5:00 - Iglesia World Wide Mission."
     },
     {
       "title": "Taller de Pedagogía para Maestros de Escuela Dominical",
-      "body": "Sábado 18 de abril - Iglesia World Wide Mission."
+      "body": "Sábado 18 de abril del 2026 - Iglesia World Wide Mission."
     }
   ],
   "sermon_leader": "Pastor Gregorio Gironda",
