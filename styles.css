@@ -1,0 +1,130 @@
+/* styles.css — versión v3: mejoras visuales (labels vs values, escuela 2x2) */
+:root{
+  --bg-start:#f3f8ff;
+  --bg-end:#eef7ff;
+  --card: rgba(255,255,255,0.82);
+  --glass-border: rgba(255,255,255,0.66);
+  --accent: #0b5aa6;
+  --accent-dark: #073b73;
+  --accent-red: #d32f2f;
+  --muted: #556778;
+  --text: #072033;
+  --radius: 16px;
+  --maxw: 1100px;
+  --gap:18px;
+  --shadow: 0 12px 36px rgba(6,25,49,0.10);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:'Open Sans',system-ui,Arial,Helvetica,sans-serif;
+  background: linear-gradient(180deg,var(--bg-start),var(--bg-end));
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:40px;
+}
+
+.container{max-width:var(--maxw);margin:0 auto;padding:20px;}
+
+/* HERO */
+.hero{
+  padding:22px 0;
+  background: linear-gradient(90deg, rgba(7,59,115,0.96), rgba(11,90,166,0.96));
+  color:white;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.hero-inner{display:flex;align-items:center;gap:16px;}
+.hero-logo{width:88px;height:88px;object-fit:contain;border-radius:12px;background:rgba(255,255,255,0.06);padding:8px;box-shadow:0 6px 18px rgba(3,28,66,0.18)}
+.site-title{font-family:'Montserrat',sans-serif;letter-spacing:1px;margin:0;font-size:1rem;opacity:0.95}
+.church-name{margin:4px 0 0 0;font-size:1.4rem;font-weight:700}
+.subtitle{margin:6px 0 0 0;font-weight:600;opacity:0.95}
+.contact-inline{margin-top:8px;font-size:0.85rem;opacity:0.9}
+
+/* MAIN AREA */
+.main-area{display:flex;flex-direction:column;gap:var(--gap);margin-top:20px;padding:0 10px;}
+
+/* CARD - glass */
+.card{
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:20px;
+  background:var(--card);
+  border:1px solid var(--glass-border);
+  backdrop-filter: blur(12px) saturate(120%);
+}
+
+/* Service card */
+.service-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}
+.service-header h2{margin:0;font-size:1.18rem;font-weight:700}
+.service-meta{color:var(--muted);font-weight:600}
+
+/* IMPORTANT: labels (h3/dt) use muted color; values (p/dd) use accent-dark for contrast */
+.service-body{display:flex;flex-direction:column;gap:16px}
+.service-body .sermon h3, .service-body .worship h3, .school h3 {
+  margin:0 0 6px 0;
+  font-size:0.98rem;
+  color:var(--muted); /* label color */
+  font-weight:600;
+}
+.service-body .sermon p, .service-body .worship p {
+  margin:0;
+  font-weight:700;
+  color:var(--accent-dark); /* value color for emphasis */
+  font-size:1.02rem;
+}
+
+/* subtle metadata */
+.service-meta small{display:inline-block;color:var(--muted);font-weight:600}
+
+/* Divider */
+.sep{border:none;border-top:1px solid rgba(6,25,49,0.06);margin:12px 0}
+
+/* Escuela Dominical grid: default two columns x two rows (2x2) for desktop */
+.ss-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:8px}
+.ss-item{padding:14px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.97),#fff);border:1px solid rgba(8,40,80,0.04)}
+.ss-item h4{margin:0 0 8px 0;font-size:0.95rem;color:var(--muted);font-weight:600}
+.ss-item p{margin:0;font-weight:700;color:var(--accent-dark);font-size:1rem}
+
+/* Announcements */
+.announcements-card h2{margin-top:0}
+.ann-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px}
+.ann-item{padding:16px;border-radius:14px;background:linear-gradient(180deg,#fff,#fbfeff);border-left:6px solid var(--accent);box-shadow:0 10px 26px rgba(10,45,90,0.04)}
+.ann-item h4{margin:0 0 6px 0;font-size:1.02rem;color:var(--accent-dark)}
+.ann-item p{margin:0;color:var(--muted);font-size:0.96rem}
+
+/* Footer */
+.site-footer{margin-top:18px;text-align:center;color:var(--muted);padding:18px;border-radius:8px}
+
+/* Responsive adjustments */
+@media (min-width:1100px){
+  /* keep 2x2 grid even on wide screens */
+  .ss-grid{grid-template-columns:repeat(2,300px);grid-auto-rows: minmax(70px, auto);justify-content:start}
+}
+
+@media (max-width:1000px){
+  .ss-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media (max-width:560px){
+  .ss-grid{grid-template-columns:1fr}
+  .hero-inner{flex-direction:column;align-items:flex-start;gap:8px}
+  .hero-logo{width:72px;height:72px}
+  .service-header{flex-direction:column;align-items:flex-start;gap:6px}
+}
+
+/* estilo simple para el botón de recarga */
+.btn-reload{
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left:12px;
+  box-shadow: 0 6px 14px rgba(11,90,166,0.14);
+}
+.btn-reload:disabled{opacity:0.6;cursor:not-allowed}
+.data-status{margin-left:10px;font-size:0.95rem}

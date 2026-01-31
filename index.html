@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WORLD WIDE MISSIONS — Iglesia Evangélica Cristiana - Viacha</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner container">
+      <img src="assets/logo.png" alt="Logo Iglesia" class="hero-logo" />
+      <div class="hero-text">
+        <h1 class="site-title">WORLD WIDE MISSIONS</h1>
+        <h2 class="church-name">Iglesia Evangélica Cristiana — Viacha</h2>
+        <p class="subtitle">Misiones Mundiales</p>
+        <p class="contact-inline">RES. SUP. Nº 103302 — Calle Mejillones Nº 54 — La Paz · Viacha</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-area">
+    <!-- Sección 1: Servicio + Escuela Dominical (Juntos) -->
+    <section class="card glass service-card" aria-labelledby="service-title">
+      <div class="service-header">
+        <h2 id="service-title">Información del Servicio</h2>
+
+        <!-- <-- aquí añadimos el botón y el estado --> 
+        <div class="service-meta">
+          <span id="service-time">—</span>
+
+
+        </div>
+      </div>
+
+      <div class="service-body">
+        <div class="sermon">
+          <h3>Sermón principal</h3>
+          <p id="sermon-leader">—</p>
+        </div>
+
+        <div class="worship">
+          <h3>Dirección de culto</h3>
+          <p id="worship-leader">—</p>
+        </div>
+
+        <hr class="sep" />
+
+        <div class="school">
+          <h3>Escuela Dominical</h3>
+          <div class="ss-grid">
+            <div class="ss-item">
+              <h4>Adultos</h4>
+              <p id="ss-adults">—</p>
+            </div>
+            <div class="ss-item">
+              <h4>Jóvenes</h4>
+              <p id="ss-youth">—</p>
+            </div>
+            <div class="ss-item">
+              <h4>Pre-juveniles</h4>
+              <p id="ss-pre">—</p>
+            </div>
+            <div class="ss-item">
+              <h4>Niños</h4>
+              <p id="ss-children">—</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 2: Anuncios -->
+    <section class="card glass announcements-card" aria-labelledby="ann-title">
+      <h2 id="ann-title">Anuncios</h2>
+      <ul id="ann-list" class="ann-list" role="list"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div class="footer-inner">
+      <p>© <span id="year"></span> WORLD WIDE MISSIONS — Misiones Mundiales - Viacha</p>
+    </div>
+  </footer>
+
+<script id="initial-data" type="application/json">
+{
+  "week_of": "2026-02-01",
+  "announcements": [
+    {"title":"Torneo Bíblico - Sociedad Cristiana de Jóvenes","body":"Sábado 18:30 - Iglesia World Wide Mission."},
+    {"title":"Oración de Madrugada","body":"Sábado 18:30 - Iglesia World Wide Mission."}
+  ],
+  "sermon_leader": "Pastor Gregorio Gironda",
+  "worship_leader": "Hno. Audon Suxo",
+  "service_time": "Domingo 9:00 - Culto Principal",
+  "sunday_school": {
+    "adults": "Hno. Alvaro Flores",
+    "youth": "Hna. Karen Arcani",
+    "pre": "Hna. Viky Lizbeth Suxo",
+    "children": "Hna. Hortencia Peña"
+  }
+}
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>
