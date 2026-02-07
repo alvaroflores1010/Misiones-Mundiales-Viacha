@@ -120,8 +120,8 @@ window.__DATA_FALLBACK__ = {
   "week_of": "2026-02-01",
   "announcements": [
     {
-      "title": "Torneo Bíblico - Sociedad Cristiana de Jóvenes",
-      "body": "Sábado 31 de enero del 2026 a las 18:30 - Iglesia World Wide Mission."
+      "title": "Ayuno Unido - Iglesia San Juan",
+      "body": "Sábado 7 de febrero del 2026 a las 10:00 "
     },
     {
       "title": "Oración de Madrugada",
@@ -132,8 +132,8 @@ window.__DATA_FALLBACK__ = {
       "body": "Sábado 18 de abril del 2026 - Iglesia World Wide Mission."
     }
   ],
-  "sermon_leader": "Pastor Gregorio Gironda",
-  "worship_leader": "Hno. Audon Suxo",
+  "sermon_leader": "Hno. Audon Suxo",
+  "worship_leader": "Hno. Wilmer Quispe",
   "service_time": "Domingo 9:00 - Culto Principal",
   "sunday_school": {
     "adults": "Hno. Alvaro Flores",
